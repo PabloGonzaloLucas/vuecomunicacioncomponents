@@ -3,9 +3,9 @@
     <h4 style="color:red">{{nombreDeporte}}</h4>
     <button @click="seleccionarFavorito"> 
 
-            Seleccionar favorito 
+ Seleccionar favorito 
 
-        </button> 
+   </button> 
   </div>
 </template>
 

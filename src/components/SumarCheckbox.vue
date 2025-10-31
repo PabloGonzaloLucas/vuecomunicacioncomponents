@@ -5,6 +5,7 @@
         <button @click="generarCheckbox">Generar Checkbox</button>
         <div v-for="(check, index) in checks" :key="check" :index="index" :value="check">
             <input type="checkbox" :value="check" v-model="seleccionados" @change="sumarRestar(index)">
+            <!-- <input type="checkbox" :value="check" v-model="seleccionados" @change="sumarRestar(index)"> -->
             <label>{{check}}</label>
         </div >
     </div>
@@ -27,10 +28,17 @@ export default {
         },
         sumarRestar(index){
             for(var i=0; i<this.seleccionados.length; i++){
+                if(this.seleccionados[i] == true)
                 this.suma += this.seleccionados[i];
             }
             console.log(this.suma, index, this.checks[index])
         }
+        // sumarRestar(index){
+        //     for(var i=0; i<this.seleccionados.length; i++){
+        //         this.suma += this.seleccionados[i];
+        //     }
+        //     console.log(this.suma, index, this.checks[index])
+        // }
     }
 
 }
